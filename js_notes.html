@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="js_notes.css">
+    <link rel="icon" type="image/x-icon" href="images/phoenix.jpg">
+</head>
+<body>
+    <p>// 1 onclick="" + button  // element.innerText</p>
+    <button onclick="alert('hello')">alert("hello")</button>
+    <button onclick="custom()">custom()</button>
+    <button onclick="example(this)">example(this)</button>
+    <button id="button1" onclick="turnOff(this)">On</button>
+    <button id="button2" onclick="turnOff(this)">On</button>
+    <button id="button3" onclick="turnOff(this)">On</button>
+    <br><br>
+    <hr>
+    <p>// 2 onclick="" + img // element.remove()    </p>
+    <img src="images/player.png" alt="airplane" onclick="hide(this)" style="background-color:yellow;">
+    <img src="images/player.png" alt="airplane" onclick="hide(this)" style="background-color:pink;">
+    <img src="images/player.png" alt="airplane" onclick="hide(this)" style="background-color:cornflowerblue;">
+    <br><br>
+    <hr>
+    <p>// 3 onmouseover=""   onmouseleave=""    onmouseover=""   // element.classList.add("shadow")  // element.classList.remove("shadow")</p>
+    <img src="images/player.png" alt="airplane" onmouseover="addShadow(this)" onmouseleave="removeShadow(this)" style="background-color:yellow;">
+    <img src="images/player.png" alt="airplane" onmouseover="addShadow(this)" onmouseleave="removeShadow(this)" style="background-color:yellow;">
+    <img src="images/player.png" alt="airplane" onmouseover="addShadow(this)" onmouseout="removeShadow(this)" style="background-color:yellow;">
+    <br><br>
+    <hr>
+    <p>xxxx</p>
+
+
+    <script src="js_notes.js"></script>
+</body>
+</html>
