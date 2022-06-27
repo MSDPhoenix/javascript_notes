@@ -80,8 +80,8 @@ function hide(element){
 // element.classList.add("shadow")
 // element.classList.remove("shadow")
 // element.style.backgroundColor=""
-// element.play()
-// element.pause()
+// play() / element.play()
+// pause() / element.pause()
 
 function addShadow(element) {
     element.classList.add("shadow");
@@ -99,8 +99,16 @@ function out(element) {
 }
 
 // 4 document.querySelector("")// 
-
-
+let $4count = 1;
+let $4counter = document.querySelector("#counter");
+function add1() {
+    $4count ++
+    $4counter.innerText = "The count is " + $4count
+}
+function subtract1() {
+    $4count --
+    $4counter.innerText = "The count is " + $4count
+}
 
 
 

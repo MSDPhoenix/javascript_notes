@@ -9,7 +9,9 @@
     <link rel="icon" type="image/x-icon" href="images/phoenix.jpg">
 </head>
 <body>
-    <p>// 1 onclick="" + button  // element.innerText</p>
+    <p>// 1 onclick="" + button  
+        // element.innerText
+    </p>
     <button onclick="alert('hello')">alert("hello")</button>
     <button onclick="custom()">custom()</button>
     <button onclick="example(this)">example(this)</button>
@@ -18,7 +20,9 @@
     <button id="button3" onclick="turnOff(this)">On</button>
     <br><br>
     <hr>
-    <p>// 2 onclick="" + img // element.remove()    </p>
+    <p>// 2 onclick="" + img 
+        // element.remove()    
+    </p>
     <img src="images/player.png" alt="airplane" onclick="hide(this)" style="background-color:yellow;">
     <img src="images/player.png" alt="airplane" onclick="hide(this)" style="background-color:pink;">
     <img src="images/player.png" alt="airplane" onclick="hide(this)" style="background-color:cornflowerblue;">
@@ -28,9 +32,9 @@
         // element.classList.add("shadow")
         // element.classList.remove("shadow")
         // element.style.backgroundColor=""
-        // element.play()
-        // element.pause()
-        </p>
+        // play() / element.play()
+        // pause() / element.pause()
+    </p>
     <img src="images/player.png" alt="airplane" onmouseover="addShadow(this)" onmouseleave="removeShadow(this)" style="background-color:yellow;">
     <img src="images/player.png" alt="airplane" onmouseover="addShadow(this)" onmouseleave="removeShadow(this)" style="background-color:yellow;">
     <img src="images/player.png" alt="airplane" onmouseover="addShadow(this)" onmouseout="removeShadow(this)" style="background-color:yellow;">
@@ -40,10 +44,12 @@
     <video width="300px" onmouseover="play(this)" onmouseout="pause(this)" controls muted="muted">
         <source src="movie.mp4" type="video/mp4">
     </video>
-<br><br>
+    <br><br>
     <hr>
-
-
+    <p>// 4 document.querySelector("")//</p>
+    <h1 id="counter">The count is 1</h1>    
+    <button onclick="add1()">+</button>
+    <button onclick="subtract1()">-</button>
 
 
 
