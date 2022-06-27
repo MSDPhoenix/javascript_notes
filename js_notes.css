@@ -12,9 +12,27 @@ element.classList.remove("shadow") */
     cursor:pointer;
 }
 
-#block {
+.block {
     height:50px;
     width:200px;
     background-color: silver;
     border: 1px dotted black;
+}
+
+/* 4 document.querySelector("xxxxx")
+xxxxx.innerText = yyyyy
+xxxxx.src = 
+xxxxx.alt = 
+element.style.backgroundColor=""
+element.style.color = "" */
+
+.red {
+    background-color: red;
+    color:white;
+    padding:1vw;
+}
+.yellow {
+    background-color: yellow;
+    color:green;
+    padding:1vw;
 }

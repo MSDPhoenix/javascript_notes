@@ -30,7 +30,7 @@ function createArray(num) {
 var y = createArray(5)
 // console.log(y)
 
-// 1 onclick="" + button
+// 1 onclick=""
 // element.innerText
 
 function custom() {
@@ -69,6 +69,16 @@ function turnOff(element) {
     }
 }
 
+function turnOff2(element) {
+    console.log("turnOff2",element.innerText)
+    if (element.innerText=="On"){
+        element.innerText = "Off";
+    } else {
+        element.innerText = "On";
+    }
+}
+
+
 // 2 onclick="" + img
 // element.remove()
 
@@ -98,7 +108,10 @@ function out(element) {
     element.style.backgroundColor="silver"
 }
 
-// 4 document.querySelector("")// 
+// 4 document.querySelector("xxxxx")        CHANGE HTML
+// xxxxx.innerText = yyyyy
+// xxxxx.src = 
+// xxxxx.alt = 
 let $4count = 1;
 let $4counter = document.querySelector("#counter");
 function add1() {
@@ -110,7 +123,48 @@ function subtract1() {
     $4counter.innerText = "The count is " + $4count
 }
 
+let ninja_plane = document.querySelector("#ninja_plane")
+function switchImg() {
+    if (ninja_plane.alt == "ninja"){
+        ninja_plane.src = "images/player.png"  
+        ninja_plane.alt = "plane"  
+    } else {
+        ninja_plane.src = "images/ninja.png"  
+        ninja_plane.alt = "ninja"  
+    }
+}
 
+// 5 CHANGE CSS
+// element.style.color = ""
+// element.style.backgroundColor=""
+// element.style.classList.remove("")
+// element.style.classList.add("")
+// element.style.classList.includes("")
 
+function changeColor1(element){
+    console.log(element.style.color)
+    console.log(element.style.backgroundColor)
+    if (element.style.color == "white") {
+        console.log("yes")
+        element.style.color = "green"
+        element.style.backgroundColor = "yellow"
+        element.innerText = "switch to red";
+    } else {
+        console.log("no")
+        element.style.color = "white"
+        element.style.backgroundColor = "red"
+        element.innerText = "switch to yellow";
+    }
+}
 
-// 5 
+function changeColor2(element) {
+    // if (element.classList[0] == "red") {
+    if (element.classList.value.includes("red")) {
+        element.classList.remove("red");
+        element.classList.add("yellow");
+
+    } else {
+        element.classList.remove("yellow");
+        element.classList.add("red");
+    }
+}
