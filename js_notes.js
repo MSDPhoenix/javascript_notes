@@ -79,6 +79,9 @@ function hide(element){
 // 3 onmouseover=""   onmouseleave=""
 // element.classList.add("shadow")
 // element.classList.remove("shadow")
+// element.style.backgroundColor=""
+// element.play()
+// element.pause()
 
 function addShadow(element) {
     element.classList.add("shadow");
@@ -86,5 +89,20 @@ function addShadow(element) {
 function removeShadow(element) {
     element.classList.remove("shadow");
 }
+function over(element) {
+    // alert("mouseover");
+    element.style.backgroundColor="lime"
+}
+function out(element) {
+    // alert("mouseout");
+    element.style.backgroundColor="silver"
+}
 
-// 4 
+// 4 document.querySelector("")// 
+
+
+
+
+
+
+// 5 
