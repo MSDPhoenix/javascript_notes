@@ -192,6 +192,7 @@ function like(id) {
 // 7 setTimeout(function_to_be_run,delay_in_miliseconds)
 // onchange="xxxx()"
 // oninput="xxxxx()"
+// onkeydown="xxxxx()"
 
 function message() {
     console.log("Delayed message");    
@@ -201,4 +202,38 @@ console.log("Start");
 setTimeout(message, 3000);
 console.log("End");
 
+// VERSION 1
 
+const nameSpan=document.getElementById('name');
+
+function changeName(id){
+    const oldname=nameSpan.innerText;
+    nameSpan.innerHTML = `<input type="text" name="name" value="${oldname}" oninput="setName(this)">`;
+}
+
+function setName(element){
+    const newName = element.value;
+    document.onkeydown=function(event){
+        if (event.key == "Enter"){
+            nameSpan.innerHTML = element.value;
+        }
+    }
+
+}
+// VERSION 2
+
+const nameSpan2=document.getElementById('name2');
+
+function changeName2(id){
+    const oldName=nameSpan2.innerText;
+    console.log(nameSpan2.innerText)
+    nameSpan2.innerHTML = `<input type="text" id="new_name" value="${oldName}" onkeydown="setName(event)">`;
+}
+
+function setName(event){
+    element = document.getElementById("new_name");
+    const newName = element.value;
+   if (event.key == "Enter"){
+        nameSpan2.innerHTML = newName;
+    }
+}
