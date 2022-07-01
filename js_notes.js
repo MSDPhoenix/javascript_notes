@@ -139,7 +139,7 @@ function switchImg() {
 // element.style.backgroundColor=""
 // element.style.classList.remove("")
 // element.style.classList.add("")
-// element.style.classList.includes("")
+// element.style.classList.value.includes("")
 
 function changeColor1(element){
     console.log(element.style.color)
@@ -159,12 +159,46 @@ function changeColor1(element){
 
 function changeColor2(element) {
     // if (element.classList[0] == "red") {
-    if (element.classList.value.includes("red")) {
+    if (element.classList.vaflue.includes("red")) {
         element.classList.remove("red");
         element.classList.add("yellow");
-
+        element.innerText = "switch to red";
     } else {
         element.classList.remove("yellow");
         element.classList.add("red");
+        element.innerText = "switch to yellow";
     }
 }
+// 6 SELECTING AMONG MULTIPLE IDENTICAL ELEMENTS WITH JavaScript
+
+const likes = [0,0,0];
+const like_statements = [
+    document.querySelector("#post_1"),
+    document.querySelector("#post_2"),
+    document.querySelector("#post_3"),
+];
+
+function like(id) {
+    likes[id] ++
+    if (likes[id] == "1") {
+        // like_statements[id].innerText = `${likes[id]} like`;
+        like_statements[id].innerText = likes[id] + " like";
+    } else {
+        // like_statements[id].innerText = `${likes[id]} likes`;
+        like_statements[id].innerText = likes[id] + " likes";
+    }
+}
+
+// 7 setTimeout(function_to_be_run,delay_in_miliseconds)
+// onchange="xxxx()"
+// oninput="xxxxx()"
+
+function message() {
+    console.log("Delayed message");    
+}
+    
+console.log("Start");
+setTimeout(message, 3000);
+console.log("End");
+
+
