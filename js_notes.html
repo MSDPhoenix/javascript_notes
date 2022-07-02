@@ -80,19 +80,29 @@
     <span id="post_3">0 likes</span> 
     <button onclick="like(2)">Like</button>
     <br><br>
+    <hr>
     // 7 setTimeout(function_to_be_run,delay_in_miliseconds)
     // onchange="xxxx()"
     // oninput="xxxxx()"
     <p>Hello, my name is <span id="name">Harold</span></p>
-    <button onclick="changeName('#name')">Change Name</button>
+    <button onclick="changeName()">Change Name</button>
     <br>
     <p>Hello, my name is <span id="name2">Harold</span></p>
-    <button onclick="changeName2('#name2')">Change Name</button>
+    <button onclick="changeName2('name2')">Change Name</button>
     <br><br>
     <hr>
+    <p>// 8 onchange(this)</p>
+    <select name="food" id="" onchange="pickFood(this)">
+        <option>pizza</option>
+        <option>kebabs</option>
+        <option>sandwich</option>
+        <option>sushi</option>
+    </select>
+    <button onclick="order()">Order Food</button>
 
 
 
+    <br><br><br><br><br><br><br><br><br><br>
     <script src="js_notes.js"></script>
 </body>
 </html>

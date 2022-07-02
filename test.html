@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello, my name is <span id="name2">Harold</span></p>
+    <button onclick="changeName2('name2')">Change Name</button>
+    <script>
+        function changeName2(id){
+            const nameSpan2=document.getElementById(id);
+            const oldName=nameSpan2.innerText;
+            nameSpan2.innerHTML = `<input type="text" id="new_name" value="${oldName}" onkeydown="setName(event,'${id}')">`;
+        }
+        function setName(event,id){
+            if (event.key == "Enter"){
+                const nameSpan2=document.getElementById(id);    
+                element = document.getElementById("new_name");
+                const newName = element.value;
+                nameSpan2.innerHTML = newName;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -159,7 +159,7 @@ function changeColor1(element){
 
 function changeColor2(element) {
     // if (element.classList[0] == "red") {
-    if (element.classList.vaflue.includes("red")) {
+    if (element.classList.value.includes("red")) {
         element.classList.remove("red");
         element.classList.add("yellow");
         element.innerText = "switch to red";
@@ -206,7 +206,7 @@ console.log("End");
 
 const nameSpan=document.getElementById('name');
 
-function changeName(id){
+function changeName(){
     const oldname=nameSpan.innerText;
     nameSpan.innerHTML = `<input type="text" name="name" value="${oldname}" oninput="setName(this)">`;
 }
@@ -222,18 +222,28 @@ function setName(element){
 }
 // VERSION 2
 
-const nameSpan2=document.getElementById('name2');
 
 function changeName2(id){
+    const nameSpan2=document.getElementById(id);
     const oldName=nameSpan2.innerText;
-    console.log(nameSpan2.innerText)
-    nameSpan2.innerHTML = `<input type="text" id="new_name" value="${oldName}" onkeydown="setName(event)">`;
+    nameSpan2.innerHTML = `<input type="text" id="new_name" value="${oldName}" onkeydown="setName2(event,'${id}')">`;
 }
 
-function setName(event){
-    element = document.getElementById("new_name");
-    const newName = element.value;
-   if (event.key == "Enter"){
+function setName2(event,id){
+    if (event.key == "Enter"){
+        const nameSpan2=document.getElementById(id);    
+        element = document.getElementById("new_name");
+        const newName = element.value;
         nameSpan2.innerHTML = newName;
     }
+}
+// 8 onchange(this)
+let foodToOrder = "pizza";
+
+function pickFood(element){
+    // console.log("The food is ",element.value);
+    foodToOrder = element.value;
+}
+function order(){
+    alert("Ordering "+foodToOrder)
 }
