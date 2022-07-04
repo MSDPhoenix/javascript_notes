@@ -189,6 +189,18 @@ function like(id) {
     }
 }
 
+// VERSION 2
+
+function like2(id) {
+    let likes = Number(document.getElementById(id).innerText.match(/\d+/g)[0])
+    likes ++
+    if (likes == "1") {
+        document.getElementById(id).innerText = likes + " like";
+    } else {
+        document.getElementById(id).innerText = likes + " likes";
+    }
+}
+
 // 7 setTimeout(function_to_be_run,delay_in_miliseconds)
 // onchange="xxxx()"
 // oninput="xxxxx()"
@@ -237,18 +249,21 @@ function setName2(event,id){
         nameSpan2.innerHTML = newName;
     }
 }
+
 // 8 onchange(this)
+
 let foodToOrder = "pizza";
 
 function pickFood(element){
-    // console.log("The food is ",element.value);
     foodToOrder = element.value;
 }
 function order(){
     alert("Ordering "+foodToOrder)
 }
+
 // 9 document.querySelectorall("...")
 // .style.color = xxxx
+
 var colors = document.querySelectorAll(".color");
     
 function applyColors(){
@@ -256,3 +271,35 @@ function applyColors(){
         colors[i].style.color = colors[i].innerText;
     }
 }
+
+// 10 API = Application Programming Interface
+// JSON = JavaScript Object Notation
+// await fetch, await response.json()
+// AJAX =  Asynchronous JavaScript And XML
+// Any time we use the await keyword in a function in JavaScript 
+// we need to apply the async keyword to that function.
+
+async function getCoderData() {
+    const response = await fetch("https://api.github.com/users/dev-marisa");
+    const coderData = await response.json();
+    console.log(coderData.avatar_url);
+    const avatar = document.querySelector("button[onclick='getCoderData()']");
+    avatar.outerHTML = `<img src="${coderData.avatar_url}" alt="marisa avatar" height="100vw;">`
+
+}
+    
+// getCoderData();
+
+// 11 MEDIA QUERIES
+
+// PHONE	Width less than or equal to 480px
+// TABLET	Width between 481px and 1023px
+// DESKTOP	Width greater than or equal to 1024px
+
+// The REM unit is a multiplier of the default font size of the user's browser. 
+// The EM unit is a multiplier of the element's parent.
+
+// 12 TRANSITION
+
+
+

@@ -20,6 +20,7 @@ element.classList.remove("shadow") */
 }
 
 /* 4 document.querySelector("xxxxx")
+
 xxxxx.innerText = yyyyy
 xxxxx.src = 
 xxxxx.alt = 
@@ -36,8 +37,18 @@ element.style.color = "" */
     color:green;
     padding:1vw;
 }
+
 /* 9 document.querySelectorall("...") */
+
 .color {
     display:inline-block;
     margin:1vw;
+}
+
+/* 11 MEDIA QUERIES */
+
+@media only screen and (max-width: 480px){
+    .navbtn {
+        background-color: yellow;
+    }
 }
