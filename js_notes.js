@@ -192,7 +192,8 @@ function like(id) {
 // VERSION 2
 
 function like2(id) {
-    let likes = Number(document.getElementById(id).innerText.match(/\d+/g)[0])
+    // let likes = Number(document.getElementById(id).innerText.match(/\d+/g)[0])
+    let likes = parseFloat(document.getElementById(id).innerText)
     likes ++
     if (likes == "1") {
         document.getElementById(id).innerText = likes + " like";

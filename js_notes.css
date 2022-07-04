@@ -38,6 +38,14 @@ element.style.color = "" */
     padding:1vw;
 }
 
+/* 6  */
+
+.like_buttons {
+    display:inline-block;
+    width:6vw;
+    text-align:center;
+}
+
 /* 9 document.querySelectorall("...") */
 
 .color {
