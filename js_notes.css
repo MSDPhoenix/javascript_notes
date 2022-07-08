@@ -60,3 +60,9 @@ element.style.color = "" */
         background-color: yellow;
     }
 }
+
+/* 12 TRANSITION */
+
+img {
+    transition: 5000ms;
+}

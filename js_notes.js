@@ -302,5 +302,52 @@ async function getCoderData() {
 
 // 12 TRANSITION
 
+function scale(element, value) {
+    element.style.transform = "scale(" + value + ")";
 
+    
+}
 
+// 13 jQUERY / EVENT LISTENERS      
+
+// JavaScript:
+
+var btns = document.querySelectorAll(".javascript_event_listener");
+    
+for(var i=0; i<btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+        alert("Button clicked!");
+    });
+}
+
+// jQuery:
+
+$(".jquery_event_listener").click(function() {
+    alert("Button clicked");
+});
+
+// some jQuery effects:  
+// .hover	    A method that allows us to conveniently define what should happen on mouse enter and on mouse leave
+// .change	    A method to listen the changes on form inputs and selects
+// .submit
+
+// .show        Methods to hide or show an element.
+// .hide	    
+// .toggle      combines the two into one method.
+// .fadeOut
+// .fadeIn
+// .fadeToggle	Methods that animate hiding and showing with a fade effect
+// .slideUp
+// .slideDown
+// .slideToggle
+
+// .attr	Method to get or set an element's attribute
+// .text	Method to get or set the text inside an element
+// .html	Method to alter the HTML inside of an element
+// .append
+
+// .prepend	            Methods to add new elements at the end of beginning of an element
+// .css	                Method to alter an element's CSS properties
+// .addClass
+
+// .removeClass        Methods to add and remove CSS classes on an element.
