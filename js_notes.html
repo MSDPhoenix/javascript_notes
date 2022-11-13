@@ -69,7 +69,7 @@
         </p>
     <button onclick="changeColor1(this)" style="background-color:red; color:white; padding:1vw;">switch to yellow</button>
     <br><br>
-    <button onclick="changeColor2(this)" class="red" >switch to yellow</button>
+    <button onclick="changeColor2(this)" class="red orange green" >switch to yellow</button>
     <br><br>
     <hr>
     <p>// 6 SELECTING AMONG MULTIPLE IDENTICAL ELEMENTS WITH JavaScript</p>
@@ -136,10 +136,13 @@
     <br><br>
     <hr>
 
-    <p>    // 12 TRANSITION</p>        
+    <p>// 12 TRANSITION</p>        
     <img id="transition" src="images/ninja.png" alt="ninja" onmouseover="scale(this, 1.5)" onmouseleave="scale(this, 1)">
+    <br><br>
+    <hr>
 
     <p></p>
+    <p>// 13 jQUERY / EVENT LISTENERS /p>        
 
     <p>For jQuery add this code:  &lt;script src="https://code.jquery.com/jquery-3.6.0.js"></script></p>
 
@@ -180,8 +183,39 @@
     
     <br><br>
     <hr>
-    <p></p>
+
+
+
+    <p>// 14 API</p>      
+    
+    <a href="https://api.github.com/users/adion81" class="btn btn-sm btn-success">Click to Git user</a>
+    <br>
+    <br>
+    <button class="" onclick="gitUser1()">async/await</button>
+    <br>
+    <br>
+    <button class="" onclick="gitUser3()">promises</button>
+    <br>
+    <br>
+    <!-- onsubmit="handleForm()" -->
+    <form id="myForm">
+        <label for="get_followers">Get Followers</label>
+        <input type="checkbox" name="get_followers" id="get_followers" class="radio unchecked">
+        <label for="get_avatar">Get Avatar</label>
+        <input type="checkbox" name="get_avatar" id="get_avatar" class="radio">
+        <input type="button" onclick="gitUser4(click)" value="Submit" id="submit_gituser4">
+        <!-- onclick="unCheck(this)" -->
+    </form>
+
+    <h1 id="insert_name"></h1>
+    <div id="insert_avatar"></div>
+
+    <!-- http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&APPID={INSERTAPIKEY}
+    // Make sure to put your unique API key in the URL (taking out the brackets).
+    // &APPID={INSERTAPIKEY} will need to be at the end of each URL you access below and in the assignment. -->
+
     <br><br>
+
     <hr>
     <p></p>
     <br><br>

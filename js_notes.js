@@ -1,4 +1,4 @@
-
+console.log("JavaScript loaded :) ")
 // 0 BASIC FUNCTIONS 
 
 function name_of_function() {
@@ -159,6 +159,15 @@ function changeColor1(element){
 
 function changeColor2(element) {
     // if (element.classList[0] == "red") {
+    console.log("\n\tA\n")
+    console.log(element)
+    // console.log(element.classList.includes("red"))
+    console.log("\n\tB\n")
+    console.log(element.classList.contains("red"))
+    console.log("\n\tC\n")
+    console.log(element.classList.value)
+    console.log("\n\tD\n")
+
     if (element.classList.value.includes("red")) {
         element.classList.remove("red");
         element.classList.add("yellow");
@@ -351,3 +360,74 @@ $(".jquery_event_listener").click(function() {
 // .addClass
 
 // .removeClass        Methods to add and remove CSS classes on an element.
+
+
+// 13 jQUERY / EVENT LISTENERS 
+
+async function gitUser1() {
+    var response = await fetch("https://api.github.com/users/adion81");
+    var coderData = await response.json()
+
+    // console.log (coderData)
+
+    // for (e in coderData){
+    //     console.log (e)
+    // }
+
+    // console.log (coderData.avatar_url)
+    // console.log (coderData.name)
+
+    const insert_name = document.getElementById("insert_name")
+    insert_name.innerText = `${coderData.name} has ${coderData.followers} followers`
+    const insert_avatar = document.getElementById("insert_avatar")
+    insert_avatar.innerHTML = `<img src="${coderData.avatar_url}" alt="">`
+    // insert_avatar.outerHTML = `<img src="${coderData.avatar_url}" alt="">`
+    return coderData
+
+}
+
+async function gitUser2() {
+    var coderData = await gitUser1();
+    console.log (coderData);
+    console.log ("E",coderData.avatar_url);
+    console.log ();
+    console.log (typeof(coderData));
+    console.log (Array.isArray(coderData));
+    console.log(Object.keys(coderData));  
+    for (b in Object.keys(coderData)){
+        console.log(Object.keys(coderData)[b]);
+    }
+    for (e in coderData){
+        console.log(e);
+    }
+}
+
+function gitUser3() {
+    var result = fetch("https://api.github.com/users/adion81")
+    .then(response => response.json())
+    .then(coderData => {
+                    // document.getElementById("insert_name").innerText=`${result.name} has ${result.followers} followers`;
+                    const insert_name = document.getElementById("insert_name")
+                    insert_name.innerText = `${coderData.name} has ${coderData.followers} followers`
+                    const insert_avatar = document.getElementById("insert_avatar")
+                    insert_avatar.innerHTML = `<img src="${coderData.avatar_url}" alt="">`                                    
+                    }
+            )
+    .catch(err => console.log("D",err))
+
+}
+
+// WITH FORM AND INPUT INSTEAD OF JUST BUTTONS
+
+async function gitUser4(){   
+    const get_followers = document.getElementById("get_followers");
+    const get_avatar = document.getElementById("get_avatar");
+    var response = await fetch("https://api.github.com/users/adion81");
+    var coderData = await response.json()
+    if (get_followers.checked == true){
+        document.getElementById("insert_name").innerText = `${coderData.name} has ${coderData.followers} followers`
+        }
+    if (get_avatar.checked == true){
+        document.getElementById("insert_avatar").innerHTML = `<img src="${coderData.avatar_url} alt="">`                                    
+        }
+}
